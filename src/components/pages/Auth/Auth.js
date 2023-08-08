@@ -68,7 +68,7 @@ const Auth = () => {
            localStorage.setItem('email',data.email)
            updateTheToken(data.idToken)
 
-          navigate('/');
+           localStorage.getItem('isProfileComplete') === 'true' ? navigate("/expenses") : navigate("/completeprofilebuttonwindow")
         } catch (error) {
           alert(error.message);
         }
@@ -86,7 +86,7 @@ const Auth = () => {
           )}
           {isLoading && <p>Sending request...</p>}
         <br />
-        {isLogin && <Link to='/changepassword' ><p>forgot password?</p></Link>}
+        {isLogin && <Link to='/resetpassword' ><p>forgot password?</p></Link>}
         <button className='switch' onClick={switchAuthModeHandler}>{isLogin ? 'Create new account' : 'Login with existing account'}</button>
         </form>
     </div>
