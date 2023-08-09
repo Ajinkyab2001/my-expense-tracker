@@ -6,12 +6,19 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import AuthcontextProvider from './ContextStore/AuthContextProvider';
+import ExpenseFormContextProvider from './ContextStore/ExpenseFormContext/ExpenseFormContextProvider';
+import EditButtonContextProvider from './ContextStore/EditButtonContext/EditButtonContextProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <AuthcontextProvider>
+  <ExpenseFormContextProvider>
+  <EditButtonContextProvider>  
     <App />
+    </EditButtonContextProvider>
+
+    </ExpenseFormContextProvider>
     </AuthcontextProvider>
     </BrowserRouter>
 );
