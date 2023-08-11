@@ -175,7 +175,7 @@ const ExpenseForm = () => {
                     id="category"
                     required
                   >
-                    {/* <option value="" disabled selected> Expense Category</option> */}
+                    <option value="" disabled selected>Category</option>
                     <option>Food</option>
                     <option>Shoping</option>
                     <option>Travel</option>
@@ -191,8 +191,9 @@ const ExpenseForm = () => {
                     id="category"
                     required
                   >
-                    <option>Debit</option>
+                    <option value="" disabled selected>Type</option>
                     <option>Credit</option>
+                    <option>Debit</option>
                   </select>
                 </div>
               </div>

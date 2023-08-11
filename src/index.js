@@ -8,10 +8,13 @@ import { BrowserRouter } from 'react-router-dom';
 import AuthcontextProvider from './ContextStore/AuthContextProvider';
 import ExpenseFormContextProvider from './ContextStore/ExpenseFormContext/ExpenseFormContextProvider';
 import EditButtonContextProvider from './ContextStore/EditButtonContext/EditButtonContextProvider';
+import { Provider } from 'react-redux';
+import store from './ReduxStore/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <Provider store={store}>
   <AuthcontextProvider>
   <ExpenseFormContextProvider>
   <EditButtonContextProvider>  
@@ -20,6 +23,7 @@ root.render(
 
     </ExpenseFormContextProvider>
     </AuthcontextProvider>
+    </Provider>
     </BrowserRouter>
 );
 

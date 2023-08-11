@@ -17,7 +17,8 @@ const Navigation = () => {
         <Nav.Link as={Link} to='/about' >
           About
         </Nav.Link>
-        <Nav.Link as={Link} to='/expenses' >
+        
+        <Nav.Link as={Link} to={isLoggedIn?'/expenses':'./auth'} >
           Expenses
         </Nav.Link>
         {!isLoggedIn && (

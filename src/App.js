@@ -10,8 +10,11 @@ import CompleteProfileButtonWindow from './components/profile/CompleteProfileBut
 import CompleteProfile from './components/profile/CompleteProfile';
 import EmailVerification from './components/profile/EmailVerification';
 import ResetPassword from './components/profile/ResetPassword';
+import { useContext } from 'react';
+
 
 function App() {
+  
   return (
     <div className="App">
     <Navigation />
