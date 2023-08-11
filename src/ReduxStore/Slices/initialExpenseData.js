@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-const email = localStorage.getItem('email').replace('@','').replace('.','')
+
 export const  STATUSES = Object.freeze({
     SUCCESS:'SUCCESS',
         ERROR:'error',
@@ -28,6 +28,7 @@ export default initialExpenseData.reducer
 
 export function fetchDataFromServer(){
     return async function getProductsThunk(dispatch,getState){
+      const email = localStorage.getItem('email').replace('@','').replace('.','')
         const fetchedDataFromServer = [];
       try {
         const response = await axios.get(
